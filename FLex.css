@@ -1,0 +1,910 @@
+:root{
+    --main--:#e84393;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+header .logo span{
+    color: var(--main--);
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color: var(--main--);
+}
+header .head-right-1 {
+    grid-area: head2;
+}
+.SB {
+    display: inline-block;
+    margin-left: -1rem;
+}
+.SB .search-box {
+    background: none;
+    font-size: 1.5rem;
+    outline: none;
+    width: 0;
+    border: none;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+.SB:hover .search-box, .SB .search-box:valid {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+.SB .search {
+   cursor: pointer;
+   background-color: #fff;
+   border: none;
+   padding: 1rem;
+   border-radius: 50%;
+   font-size: 1.5rem;
+}
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color: var(--main--);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+
+.home{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+    background: url(https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&w=600) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 50rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--main--);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.home .content p{
+    font-size: 1.5rem;
+    color: #27c6ee;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.heading span{
+    color: var(--main--);
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+.about .row .img-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.about .row .img-container img{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .img-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.products .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+}
+.products .box-container .box .discount{
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    padding: 7rem 1rem;
+    font-size: 2rem;
+    color: var(--main--);
+    background: rgba(225, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+    display: table-footer-group;
+}
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.products .box-container .box .image img{
+    height: 25rem;
+}
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--main--);
+    color: #fff;
+}
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: var(--main--);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+.products .menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.products .menu .navbar a{
+    font-size: 2rem;
+    padding: 0 4.5rem 0 4rem;
+    color: #666;
+}
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--main--);
+    text-decoration: underline;
+}
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+.footer .IC{
+    text-align: center;
+    padding: 25rem;
+    margin-top: .5rem;
+    display: flex;
+    font-size: 3rem;
+    column-gap: 15rem;
+    padding-top: 2.5rem;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+}
+.footer .IC .icon{
+    display: inline-flex;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    outline: .2rem solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+}
+.footer .IC .icon:hover{
+    outline-offset: 4px;
+}
+.footer .IC .icon i{
+    margin: auto;
+}
+.footer .IC .icon:hover i{
+    animation: shake 0.25s;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+
+.Box{
+    position: absolute;
+    display: flex;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 75%;
+    background: url(1212221788.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+.Box form{
+    width: 90%;
+}
+
+.Box .Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 115%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: black;
+}
+
+.Form h2{
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.Form .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: white;
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 22px;
+}
+
+.Form .remember{
+    font-size: 20px;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.remember label input{
+    accent-color: black;
+    margin: 5px;
+}
+
+.Form .Submit{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+button.Submit{
+    color: black;
+    background: rgb(183, 216, 134);
+}
+
+.Form .forget{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+.forget a{
+    color: black;
+    text-decoration: none;
+}
+.forget a:hover{
+    text-decoration: underline;
+}
+
+.Form .register{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.register a{
+    color:black;
+    text-decoration: none;
+}
+.register a:hover{
+    text-decoration: underline;
+}
+
+.Social {
+   cursor: pointer;
+}
+
+.Social a{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.Face{
+    color: white;
+    background-color: #4267b2;
+    text-decoration: none;
+}
+
+a.GG{
+    color: black;
+    background-color: aquamarine;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: -1rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .Form .Submit{
+        font-size: 1.5rem;
+    }
+
+    .footer .IC {
+        padding: 0;
+        column-gap: 15%;
+    }
+
+    .Box {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background-color: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+
+    .footer .IC {
+        padding: 0;
+        column-gap: 15%;
+    }
+
+    .Form .Submit{
+        font-size: 1.5rem;
+    }
+
+    .Box {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    
+    .heading{
+        font-size: 3rem;
+    }
+
+    .footer .IC {
+        padding: 0;
+        column-gap: 15%;
+    }
+
+    .Form .Submit{
+        font-size: 1.5rem;
+    }
+
+    .Box {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@media (max-width: 390px){
+    html{
+        font-size: 50%;
+    }
+    
+    .heading{
+        font-size: 3rem;
+    }
+
+
+    
+    .home .content{
+        padding-top: 15rem;
+    }
+
+    .footer .IC {
+        padding: 0;
+        column-gap: 15%;
+    }
+
+    .Form .Submit{
+        font-size: 1.5rem;
+    }
+
+    .Box {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+#GH{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+    height: 75%;
+    background-color: white;
+    border-radius: 20px;
+}
+#GH .left{
+    width: 15%;
+    display: grid;
+    background-color:transparent;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content min-content;
+}
+
+#GH .left .h{
+    display: flex;
+    margin: 7%;
+    background-color: aquamarine;
+    width: 50%;
+}
+#GH .left .h .pic{
+    width: 100%;
+    z-index: 1;
+}
+#GH .left .h .picBig.p1{
+    display: none;
+    position: absolute;
+    left: 6%;
+    top: 40px;
+    width: 10%;
+    z-index: 0;
+}
+#GH .left .h .picBig.p2{
+    display: none;
+    position: absolute;
+    left: 6%;
+    top: 153px;
+    width: 10%;
+    z-index: 2;
+}
+#GH .left .h .picBig.p3{
+    display: none;
+    position: absolute;
+    left: 6%;
+    top: 251px;
+    width: 10%;
+    z-index: 2;
+}
+
+.h.h1:hover .picBig.p1{display: block;}
+.h.h2:hover .picBig.p2{display: block;}
+.h.h3:hover .picBig.p3{display: block;}
+
+section .mid {
+    width: 30%;
+    height: max-content;
+    /* background: url(image_195509_1_36793.jpg) no-repeat;
+    background-size: contain;
+    animation: chuyen 3s infinite ease;
+    height: 300px;
+    width: 30%;
+    display: ; */
+}
+
+#GH .mid img{
+    margin-top: 5%;
+    width: 100%;
+}
+
+
+.wapper span{
+    padding-left: 50px;
+}
+
+#GH .text-2{
+    display: none;
+}
+
+@keyframes chuyen{
+    0%{
+        background: url(image_195509_1_36793.jpg) no-repeat;
+        background-size: contain;
+    }
+    50%{
+        background: url(8935235226272_1.jpg) no-repeat;
+        background-size: contain;
+    }
+    100%{
+        background: url(8935235226272_2.jpg) no-repeat;
+        background-size: contain;
+    }
+}
+
+nav #logo{
+    display: none;
+}
+@media screen and (max-width: 768px)
+{
+    header{
+        padding: 0.5% 2%;
+        height: 60px;
+        top:0;
+    }
+    header #menu2{
+        display: block;
+    }
+    header #menu{
+        display: none;
+    }
+    header #Search{
+        width: 88%;
+    }
+    section .mid {
+        height: max-content;
+        background: url(image_195509_1_36793.jpg) no-repeat;
+        background-size: contain;
+        animation: chuyen 5s infinite ease;
+        height: 400px;
+        width: 30%;
+    }
+    header .logo{
+        display: none;
+    }
+    nav #nav{
+        display: none;
+    }
+    nav #logo{
+        width: 20%;
+        display: block;
+    }
+    nav{
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+    }
+    #GH .mid img{
+        width: 200px;
+        display: none;
+    }
+    #GH .mid{
+        text-align: center;
+        width: 100%;
+    }
+    #GH .left,
+    #GH .buy,
+    #GH .right{
+        display: none;
+    }
+    #GH{
+        display: grid;
+        grid-template-rows: max-content;
+        top: 58%;
+        width: 96%;
+        height: 88%;
+        border-radius: 0;
+    }
+    .wapper{
+        display: none;
+    }
+    .right .text{
+        display: none;
+    }
+    .buy button{
+        display: none;
+    }
+    #GH .text-2{
+        display: block;
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+}
+.right{
+    background-color: transparent;
+    width: 800px;
+    padding: 34px;
+    z-index: 1;
+}
+.right .text h2{
+    margin-bottom: 20px;
+}
+.right .text p{
+    margin: 10px 0;
+}
+.right .text i{
+    color: rgb(250, 213, 6);
+}
+.buy{
+    position: absolute;
+    top: 85%;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    padding: 0 200px;
+}
+.buy button{
+    margin-right: 15px;
+    border-radius: 10px;
+    width: 225px;
+    height: 45px;
+}
+header #log{
+    display: none;
+}
+header #Search{
+    display: flex;
+}
+.buy button{
+    border: 2px solid red; background-color: white;
+}
